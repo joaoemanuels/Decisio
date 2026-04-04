@@ -1,0 +1,14 @@
+{
+  "nextjs": {
+  "label": "Next.js",
+  "description": "Full-stack React com SSR e roteamento nativo",
+  "strengths": ["SSR", "SEO", "deploy Vercel"],
+  "tradeoffs": ["opinionated", "vendor lock-in"],
+  "scoreCategories": {       
+  "ux": 8,
+  "performance": 9,
+  "scalability": 8,
+  "dx": 9
+  }
+  }
+  }

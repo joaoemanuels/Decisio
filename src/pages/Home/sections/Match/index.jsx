@@ -1,0 +1,28 @@
+import "./match.styles.css";
+
+function Match() {
+	return (
+		<section className="match">
+			<div className="match-left">
+				<div className="match-score">
+					<img src="" alt="" />
+					<span>98% Match Score</span>
+				</div>
+
+				<h2>Next.js</h2>
+				<p>
+					The React Framework for the Web. Powering the world's largest websites
+					with high-performance SSR and static generation.
+				</p>
+			</div>
+			<div className="match-right">
+				<img
+					src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/37/aa/3d/caption.jpg?w=800&h=800&s=1"
+					alt=""
+				/>
+			</div>
+		</section>
+	);
+}
+
+export default Match;
