@@ -45,6 +45,22 @@
 	gap: 16px;
 }
 
+.method_card_img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 64px;
+	height: 64px;
+	border-radius: 16px;
+	background-color: #201f1f;
+	border: 1px solid #ffffff33;
+}
+
+.method_card img {
+	width: 25px;
+	height: 25px;
+}
+
 .method_card p {
 	color: #fff;
 	font-size: 24px;

@@ -1,6 +1,7 @@
 import "./home.styles.css";
 
 import Hero from "./sections/Hero";
+import Intelligence from "./sections/Intelligence";
 import Method from "./sections/Method";
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
 		<section className="home">
 			<Hero />
 			<Method />
+			<Intelligence />
 		</section>
 	);
 }
