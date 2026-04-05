@@ -1,15 +1,25 @@
-import "./hero.styles.css";
+import styles from "./hero.module.css";
 
 function Hero() {
 	return (
-		<div className="hero">
-			<span>Recommendation Result</span>
-			<h1>The Optimal Path.</h1>
-			<p>
-				Based on your requirements for high performance, SEO optimization, and
-				developer velocity, we have identified the leading architectural choice.
-			</p>
-		</div>
+		<section className={styles.hero}>
+			<div className={styles.hero_content}>
+				<h1>
+					Make better tech <br /> <span>decisions</span> faster
+				</h1>
+
+				<p>
+					Architect the future with precision. Decisio translates complex
+					technical requirements into actionable framework recommendations using
+					real-world benchmarks.
+				</p>
+
+				<div>
+					<button>Start Decision</button>
+					<button>View Demo</button>
+				</div>
+			</div>
+		</section>
 	);
 }
 

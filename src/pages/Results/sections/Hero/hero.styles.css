@@ -1,7 +1,9 @@
 .hero {
 	display: flex;
 	flex-direction: column;
+	width: 60%;
 	gap: 16px;
+	margin-bottom: 64px;
 }
 
 .hero span {
