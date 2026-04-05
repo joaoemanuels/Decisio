@@ -14,11 +14,16 @@ function Hero() {
 					real-world benchmarks.
 				</p>
 
-				<div>
-					<button>Start Decision</button>
-					<button>View Demo</button>
+				<div className={styles.hero_content_btn}>
+					<button className={styles.hero_btn}>Start Decision</button>
+					<button className={styles.hero_btn}>View Demo</button>
 				</div>
 			</div>
+
+			<div className={styles.hero_analysis}></div>
+
+			<div className={`${styles.light} ${styles.topLeft}`} />
+			<div className={`${styles.light} ${styles.bottomRight}`} />
 		</section>
 	);
 }
