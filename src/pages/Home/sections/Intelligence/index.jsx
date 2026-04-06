@@ -2,6 +2,7 @@ import styles from "./intelligence.module.css";
 
 import ecosystem from "@/assets/icons/ecosystem.svg";
 import shield from "@/assets/icons/shield.svg";
+import cost from "@/assets/icons/cost.svg";
 
 function Intelligence() {
 	return (
@@ -28,7 +29,7 @@ function Intelligence() {
 				<div className={styles.intelligence_top_right}>
 					<div className={styles.intelligence_top_right_img}>
 						<img src={shield} alt="" />
-            <div className={styles.light}></div>
+						<div className={styles.light}></div>
 					</div>
 					<h3>Bias Elimination</h3>
 					<p>
@@ -38,9 +39,34 @@ function Intelligence() {
 				</div>
 			</div>
 
-			<div className={styles.intelligence_bottom}>
-				<div className={styles.intelligence_bottom_left}></div>
-				<div className={styles.intelligence_bottom_right}></div>
+			<div className={styles.bottom}>
+				<div className={styles.bottom_left}>
+					<img src={cost} alt="" />
+					<h3>Cost Projection</h3>
+					<p>
+						Estimate long-term cloud and infrastructure costs based on your
+						decision.
+					</p>
+				</div>
+
+				<div className={styles.bottom_right}>
+					<div className={styles.bottom_right_content}>
+						<div className={styles.bottom_right_contentText}>
+							<h3>Instant Reports</h3>
+							<p>
+								Export high-fidelity documentation to present to stakeholders
+								and CTOs.
+							</p>
+						</div>
+						<button>&gt;</button>
+					</div>
+
+					<div className={styles.bottom_right_btn}>
+						<span>PDF</span>
+						<span>CSV</span>
+						<span>JSON</span>
+					</div>
+				</div>
 			</div>
 		</section>
 	);
