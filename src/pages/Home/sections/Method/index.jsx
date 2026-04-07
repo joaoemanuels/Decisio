@@ -4,6 +4,8 @@ import input from "@/assets/icons/input.svg";
 import analysis from "@/assets/icons/analysis.svg";
 import rocket from "@/assets/icons/rocket.svg";
 
+import MethodCard from "../../../../components/shared/MethodCard";
+
 function Method() {
 	return (
 		<section className={styles.method}>
@@ -18,38 +20,27 @@ function Method() {
 			</div>
 
 			<div className={styles.method_cards}>
-				<div className={styles.method_card}>
-					<div className={styles.method_card_img}>
-						<img src={input} alt="" />
-					</div>
-					<p>Input Parameters</p>
-					<span>
-						Define your team size, budget, scalability requirements, and
-						existing ecosystem constraints.
-					</span>
-				</div>
-
-				<div className={styles.method_card}>
-					<div className={styles.method_card_img}>
-						<img src={analysis} alt="" />
-					</div>
-					<p>Neural Analysis</p>
-					<span>
-						Our engine cross-references 500+ benchmarks and industry performance
-						data in real-time.
-					</span>
-				</div>
-
-				<div className={styles.method_card}>
-					<div className={styles.method_card_img}>
-						<img src={rocket} alt="" />
-					</div>
-					<p>Final Verdict</p>
-					<span>
-						Receive a comprehensive PDF report with the recommended stack and
-						technical justification.
-					</span>
-				</div>
+				<MethodCard
+					img={input}
+					head={"Input Parameters"}
+					text={
+						"Define your team size, budget, scalability requirements, and existing ecosystem constraints."
+					}
+				/>
+				<MethodCard
+					img={analysis}
+					head={"Input Parameters"}
+					text={
+						"Define your team size, budget, scalability requirements, and existing ecosystem constraints."
+					}
+				/>
+				<MethodCard
+					img={rocket}
+					head={"Input Parameters"}
+					text={
+						"Define your team size, budget, scalability requirements, and existing ecosystem constraints."
+					}
+				/>
 			</div>
 		</section>
 	);

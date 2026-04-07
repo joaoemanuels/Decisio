@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { decisionEngine } from "../../engine/decisionEngine";
 import questions from "../../data/questions";
+import FlowHeader from "./sections/FlowHeader";
+import FlowForm from "./sections/FlowForm";
+
+import styles from "./flow.module.css";
 
 function Flow() {
 	const [step, setStep] = useState(0);
@@ -44,8 +48,8 @@ function Flow() {
 		);
 	}
 	return (
-		<div>
-			<h2>{question.text}</h2>
+		<section className={styles.flow}>
+			{/* <h2>{question.text}</h2>
 			<div>
 				<div style={{ width: progress + "%" }} />
 			</div>
@@ -56,8 +60,12 @@ function Flow() {
 				</button>
 			))}
 
-			<button onClick={goBack}>Voltar</button>
-		</div>
+			<button onClick={goBack}>Voltar</button> */}
+
+			<FlowHeader />
+
+			<FlowForm />
+		</section>
 	);
 }
 

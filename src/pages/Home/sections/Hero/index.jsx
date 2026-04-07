@@ -21,7 +21,7 @@ function Hero() {
 				</div>
 			</div>
 
-			<Analysis/>
+			<Analysis />
 
 			<div className={`${styles.light} ${styles.topLeft}`} />
 			<div className={`${styles.light} ${styles.bottomRight}`} />

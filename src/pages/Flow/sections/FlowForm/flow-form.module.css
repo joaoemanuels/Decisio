@@ -1,0 +1,39 @@
+.flowForm {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  border-top: 1px solid rgb(75, 75, 75);
+  padding-top: 40px;
+}
+
+.actions .btn {
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	color: #0e0e0e;
+	line-height: 20px;
+	letter-spacing: -0.35px;
+}
+
+.actions .btn:nth-child(1) {
+  color: #adadad;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+
+}
+
+.actions .btn:nth-child(2) {
+	background-color: #fff;
+	border-radius: 12px;
+	width: 114px;
+	height: 48px;
+}
