@@ -1,3 +1,4 @@
+import Analysis from "./Analysis";
 import styles from "./hero.module.css";
 
 function Hero() {
@@ -20,7 +21,7 @@ function Hero() {
 				</div>
 			</div>
 
-			<div className={styles.hero_analysis}></div>
+			<Analysis/>
 
 			<div className={`${styles.light} ${styles.topLeft}`} />
 			<div className={`${styles.light} ${styles.bottomRight}`} />
