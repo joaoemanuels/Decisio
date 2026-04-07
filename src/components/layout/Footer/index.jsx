@@ -31,6 +31,11 @@ function Footer() {
 					</div>
 				</div>
 			</div>
+
+			<div class="footer_bottom">
+				<p>© 2026 Decisio. All rights reserved.</p>
+				<p>Desenvolvido por João Emanuel </p>
+			</div>
 		</footer>
 	);
 }

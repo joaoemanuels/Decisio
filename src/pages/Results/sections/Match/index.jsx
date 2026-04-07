@@ -1,11 +1,13 @@
 import "./match.styles.css";
 
+import score from "@/assets/icons/score.svg";
+
 function Match() {
 	return (
 		<section className="match">
 			<div className="match-left">
 				<div className="match-score">
-					<img src="" alt="" />
+					<img src={score} alt="" />
 					<span>98% Match Score</span>
 				</div>
 
@@ -33,7 +35,7 @@ function Match() {
 					</div>
 				</div>
 			</div>
-			
+
 			<div className="match-right">
 				<img
 					src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/37/aa/3d/caption.jpg?w=800&h=800&s=1"
