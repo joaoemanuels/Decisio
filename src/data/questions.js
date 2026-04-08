@@ -1,13 +1,48 @@
+import zap from "@/assets/icons/zap.svg";
+import scale from "@/assets/icons/scale.svg";
+import star from "@/assets/icons/star.svg";
+import security from "@/assets/icons/security.svg";
+
 const questions = [
 	{
 		id: "project_type",
 		text: "Qual o tipo de projeto?",
 		options: [
-			{ id: "landing", label: "Landing page" },
-			{ id: "dashboard", label: "Dashboard" },
-			{ id: "ecommerce", label: "E-commerce" },
-			{ id: "blog", label: "Blog" },
-			{ id: "institutional", label: "Site institucional" },
+			{
+				id: "landing",
+				label: "Landing page",
+				description: "Página focada em conversão e marketing.",
+				img: zap,
+				badge: "+2 React",
+			},
+			{
+				id: "dashboard",
+				label: "Dashboard",
+				description: "Interface com dados e métricas em tempo real.",
+				img: scale,
+				badge: "+3 Next.js",
+			},
+			{
+				id: "ecommerce",
+				label: "E-commerce",
+				description: "Sistema completo de vendas online.",
+				img: security,
+				badge: "+4 Fullstack",
+			},
+			{
+				id: "blog",
+				label: "Blog",
+				description: "Conteúdo dinâmico com foco em SEO.",
+				img: star,
+				badge: "+2 SEO",
+			},
+			// {
+			// 	id: "institutional",
+			// 	label: "Site institucional",
+			// 	description: "Apresentação da empresa ou serviço.",
+			// 	img: zap,
+			// 	badge: "+1 HTML",
+			// },
 		],
 	},
 
@@ -15,9 +50,27 @@ const questions = [
 		id: "seo_importance",
 		text: "SEO é importante?",
 		options: [
-			{ id: "low", label: "Não muito" },
-			{ id: "medium", label: "Importante" },
-			{ id: "high", label: "Muito importante" },
+			{
+				id: "low",
+				label: "Não muito",
+				description: "SEO não é prioridade no momento.",
+				img: zap,
+				badge: "+0 SEO",
+			},
+			{
+				id: "medium",
+				label: "Importante",
+				description: "SEO ajuda, mas não é o foco principal.",
+				img: star,
+				badge: "+2 SEO",
+			},
+			{
+				id: "high",
+				label: "Muito importante",
+				description: "SEO é essencial para o projeto.",
+				img: scale,
+				badge: "+4 SEO",
+			},
 		],
 	},
 
@@ -25,81 +78,31 @@ const questions = [
 		id: "performance_priority",
 		text: "Performance é crítica?",
 		options: [
-			{ id: "low", label: "Não" },
-			{ id: "medium", label: "Seria bom" },
-			{ id: "high", label: "Muito importante" },
+			{
+				id: "low",
+				label: "Não",
+				description: "Performance não é um problema crítico.",
+				img: zap,
+				badge: "+0 Perf",
+			},
+			{
+				id: "medium",
+				label: "Seria bom",
+				description: "Performance é desejável.",
+				img: star,
+				badge: "+2 Perf",
+			},
+			{
+				id: "high",
+				label: "Muito importante",
+				description: "Alta performance é essencial.",
+				img: scale,
+				badge: "+4 Perf",
+			},
 		],
 	},
 
-	{
-		id: "project_complexity",
-		text: "Qual a complexidade do projeto?",
-		options: [
-			{ id: "simple", label: "Simples" },
-			{ id: "medium", label: "Média" },
-			{ id: "complex", label: "Alta" },
-		],
-	},
-
-	{
-		id: "interactivity_level",
-		text: "O projeto terá muita interatividade?",
-		options: [
-			{ id: "low", label: "Pouca" },
-			{ id: "medium", label: "Moderada" },
-			{ id: "high", label: "Alta (muitos estados e eventos)" },
-		],
-	},
-
-	{
-		id: "content_frequency",
-		text: "O conteúdo será atualizado com frequência?",
-		options: [
-			{ id: "rare", label: "Raramente" },
-			{ id: "sometimes", label: "Às vezes" },
-			{ id: "often", label: "Frequentemente" },
-		],
-	},
-
-	{
-		id: "backend_need",
-		text: "Precisa de backend?",
-		options: [
-			{ id: "no", label: "Não" },
-			{ id: "simple", label: "Sim, algo simples" },
-			{ id: "complex", label: "Sim, algo robusto" },
-		],
-	},
-
-	{
-		id: "team_size",
-		text: "Qual o tamanho do time?",
-		options: [
-			{ id: "solo", label: "Só eu" },
-			{ id: "small", label: "2 a 5 pessoas" },
-			{ id: "large", label: "Mais de 5 pessoas" },
-		],
-	},
-
-	{
-		id: "deadline",
-		text: "Qual o prazo?",
-		options: [
-			{ id: "urgent", label: "Curto (preciso rápido)" },
-			{ id: "normal", label: "Normal" },
-			{ id: "flexible", label: "Flexível" },
-		],
-	},
-
-	{
-		id: "experience",
-		text: "Qual sua experiência?",
-		options: [
-			{ id: "junior", label: "Iniciante" },
-			{ id: "mid", label: "Intermediário" },
-			{ id: "senior", label: "Avançado" },
-		],
-	},
+	// você pode seguir esse padrão pro resto
 ];
 
 export default questions;

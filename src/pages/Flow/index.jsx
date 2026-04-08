@@ -7,18 +7,26 @@ import FlowForm from "./sections/FlowForm";
 import styles from "./flow.module.css";
 
 function Flow() {
+	const [selectedOption, setSelectedOption] = useState(null);
 	const [step, setStep] = useState(0);
 	const [answers, setAnswers] = useState({});
 
 	const question = questions[step];
-	const progress = (step / questions.length) * 100;
 
-	function handleAnswer(optionId) {
+	function handleSelect(optionId) {
+		setSelectedOption(optionId);
+	}
+
+	function handleNext() {
+		if (!selectedOption) return;
+
 		setAnswers((prev) => ({
 			...prev,
-			[question.id]: optionId,
+			[question.id]: selectedOption,
 		}));
-		setStep(step + 1);
+
+		setSelectedOption(null);
+		setStep((prev) => prev + 1);
 	}
 
 	function goBack() {
@@ -49,22 +57,17 @@ function Flow() {
 	}
 	return (
 		<section className={styles.flow}>
-			{/* <h2>{question.text}</h2>
-			<div>
-				<div style={{ width: progress + "%" }} />
+			<div className={styles.sectionForm}>
+				<FlowHeader />
+
+				<FlowForm
+					question={question}
+					onSelect={handleSelect}
+					onNext={handleNext}
+					onBack={goBack}
+					selectedOption={selectedOption}
+				/>
 			</div>
-
-			{question.options.map((option) => (
-				<button key={option.id} onClick={() => handleAnswer(option.id)}>
-					{option.label}
-				</button>
-			))}
-
-			<button onClick={goBack}>Voltar</button> */}
-
-			<FlowHeader />
-
-			<FlowForm />
 		</section>
 	);
 }
