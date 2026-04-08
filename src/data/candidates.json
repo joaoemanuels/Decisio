@@ -1,14 +1,81 @@
-{
-  "nextjs": {
-  "label": "Next.js",
-  "description": "Full-stack React com SSR e roteamento nativo",
-  "strengths": ["SSR", "SEO", "deploy Vercel"],
-  "tradeoffs": ["opinionated", "vendor lock-in"],
-  "scoreCategories": {       
-  "ux": 8,
-  "performance": 9,
-  "scalability": 8,
-  "dx": 9
-  }
-  }
-  }
+[
+	{
+		"id": "react",
+		"name": "React",
+		"category": "frontend",
+		"description": "Biblioteca para criação de interfaces dinâmicas.",
+		"type": "framework",
+		"priority": 2
+	},
+	{
+		"id": "next",
+		"name": "Next.js",
+		"category": "frontend",
+		"description": "Framework React com SSR, SEO e alta performance.",
+		"type": "framework",
+		"priority": 3,
+		"boosts": ["seo", "performance"]
+	},
+	{
+		"id": "node",
+		"name": "Node.js",
+		"category": "backend",
+		"description": "Ambiente para APIs, lógica de servidor e aplicações escaláveis.",
+		"type": "runtime",
+		"priority": 3
+	},
+	{
+		"id": "backend",
+		"name": "Backend Architecture",
+		"category": "backend",
+		"description": "Necessidade de estrutura de servidor e regras de negócio.",
+		"type": "concept",
+		"priority": 2,
+		"requires": ["node"]
+	},
+	{
+		"id": "database",
+		"name": "Database",
+		"category": "infra",
+		"description": "Sistema de armazenamento de dados estruturados.",
+		"type": "infra",
+		"priority": 3,
+		"requires": ["backend"]
+	},
+	{
+		"id": "seo",
+		"name": "SEO Optimization",
+		"category": "marketing",
+		"description": "Otimização para mecanismos de busca.",
+		"type": "strategy",
+		"priority": 2,
+		"boostedBy": ["next"]
+	},
+	{
+		"id": "performance",
+		"name": "Performance Optimization",
+		"category": "engineering",
+		"description": "Técnicas para melhorar velocidade e eficiência.",
+		"type": "strategy",
+		"priority": 2,
+		"boostedBy": ["next"]
+	},
+	{
+		"id": "security",
+		"name": "Security Layer",
+		"category": "engineering",
+		"description": "Proteção de dados e autenticação.",
+		"type": "strategy",
+		"priority": 3,
+		"requires": ["backend"]
+	},
+	{
+		"id": "scalability",
+		"name": "Scalable Architecture",
+		"category": "architecture",
+		"description": "Capacidade de crescer com usuários e dados.",
+		"type": "concept",
+		"priority": 3,
+		"requires": ["backend", "database"]
+	}
+]

@@ -1,3 +1,4 @@
+import Button from "../../../../components/ui/Button";
 import Analysis from "./Analysis";
 import styles from "./hero.module.css";
 
@@ -16,8 +17,8 @@ function Hero() {
 				</p>
 
 				<div className={styles.hero_content_btn}>
-					<button className={styles.hero_btn}>Start Decision</button>
-					<button className={styles.hero_btn}>View Demo</button>
+					<Button btn={"Start Decision"} />
+					<Button btn={"View Demo"} />
 				</div>
 			</div>
 

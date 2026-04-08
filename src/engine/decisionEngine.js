@@ -1,30 +1,46 @@
-import rules from "./rules";
+import questions from "../data/questions";
+import candidates from "../data/candidates.json";
+
+import { evaluateScores } from "./evaluator";
+import { calculateScores } from "./scorer";
 
 export function decisionEngine(answers) {
-	let score = {
-		react: 0,
-		next: 0,
-		vue: 0,
-		vite: 0,
-	};
+	const scores = calculateScores(answers, questions);
 
-	for (const questionId in answers) {
-		const answerValue = answers[questionId];
+	const ranking = evaluateScores(scores);
 
-		const ruleSet = rules[questionId]?.[answerValue];
+	const enriched = ranking
+		.map(([id, score]) => {
+			const candidate = candidates.find((c) => c.id === id);
 
-		if (!ruleSet) continue;
+			if (!candidate) return null;
 
-		for (const tech in ruleSet) {
-			score[tech] += ruleSet[tech];
-		}
+			return {
+				...candidate,
+				score,
+			};
+		})
+		.filter(Boolean);
+
+	if (!enriched.length) {
+		return {
+			primary: null,
+			recommendations: [],
+			meta: {
+				totalAnswers: 0,
+				generatedAt: new Date().toISOString(),
+			},
+		};
 	}
 
-	const ranking = Object.entries(score).sort((a, b) => b[1] - a[1]);
-
 	return {
-		recommendation: ranking[0][0],
-		score,
-		ranking,
+		primary: enriched[0],
+
+		recommendations: enriched.slice(0, 3),
+
+		meta: {
+			totalAnswers: Object.keys(answers).length,
+			generatedAt: new Date().toISOString(),
+		},
 	};
 }

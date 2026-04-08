@@ -5,6 +5,7 @@ import FlowHeader from "./sections/FlowHeader";
 import FlowForm from "./sections/FlowForm";
 
 import styles from "./flow.module.css";
+import Card from "../../components/ui/Card";
 
 function Flow() {
 	const [selectedOption, setSelectedOption] = useState(null);
@@ -30,35 +31,47 @@ function Flow() {
 	}
 
 	function goBack() {
-		if (step > 0) {
-			setStep((prev) => prev - 1);
-		}
-		return;
+		if (step === 0) return;
+
+		const prevStep = step - 1;
+		const prevQuestion = questions[prevStep];
+
+		setStep(prevStep);
+
+		setSelectedOption(answers[prevQuestion.id] || null);
 	}
 
 	if (!question) {
 		const result = decisionEngine(answers);
 
 		return (
-			<div>
-				<h2>Recomendação:</h2>
+			<section className={styles.results}>
+				<h1 className={styles.title}>
+					Stack recomendada: {result.primary?.name}
+				</h1>
 
-				<h1>{result.recommendation}</h1>
+				<p className={styles.description}>{result.primary?.description}</p>
 
-				<h3>Pontuação:</h3>
-
-				<pre>{JSON.stringify(result.score, null, 2)}</pre>
-
-				<h3>Respostas:</h3>
-
-				<pre>{JSON.stringify(answers, null, 2)}</pre>
-			</div>
+				<div className={styles.cards}>
+					{result.recommendations.map((item, index) => (
+						<Card
+							key={item.id}
+							title={item.name}
+							description={item.description}
+							category={item.category}
+							score={item.score}
+							isPrimary={index === 0}
+						/>
+					))}
+				</div>
+			</section>
 		);
 	}
+
 	return (
 		<section className={styles.flow}>
 			<div className={styles.sectionForm}>
-				<FlowHeader />
+				<FlowHeader question={question} />
 
 				<FlowForm
 					question={question}

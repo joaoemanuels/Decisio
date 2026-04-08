@@ -27,7 +27,7 @@
 	width: 60%;
 }
 
-.cta_content button {
+.cta_content .btn {
 	border-radius: 12px;
 	color: #ffffff;
 	background-color: black;

@@ -1,14 +1,11 @@
 import styles from "./flow-header.module.css";
 
-function FlowHeader() {
+function FlowHeader({ question }) {
 	return (
 		<section className={styles.flow}>
-			<span>Project strategy</span>
-			<h1>What is the primary goal for your project?</h1>
-			<p>
-				Define the core objective to refine our logic engine's architectural
-				recommendations.
-			</p>
+			<span>{question.category}</span>
+			<h1>{question.title}</h1>
+			<p>{question.description}</p>
 		</section>
 	);
 }

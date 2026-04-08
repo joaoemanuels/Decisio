@@ -1,0 +1,16 @@
+.button {
+	border-radius: 12px;
+	padding: 23px 40px;
+	color: #000a7b;
+	background-color: #8d98ff;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 0;
+}
+
+.button:nth-child(2) {
+	background-color: transparent;
+	color: #fff;
+	border: 1px solid #494847;
+}
