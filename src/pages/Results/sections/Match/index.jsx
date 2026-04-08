@@ -2,36 +2,33 @@ import "./match.styles.css";
 
 import score from "@/assets/icons/score.svg";
 
-function Match() {
+function Match({ result }) {
+	const primary = result.primary;
+
 	return (
 		<section className="match">
 			<div className="match-left">
 				<div className="match-score">
 					<img src={score} alt="" />
-					<span>98% Match Score</span>
+					<span>{primary?.score || 0}% Match Score</span>
 				</div>
 
-				<h2>Next.js</h2>
+				<h2>{primary?.name}</h2>
 
-				<p>
-					The React Framework for the Web. Powering the world's largest websites
-					with high-performance SSR and static generation.
-				</p>
+				<p>{primary?.description}</p>
 
-				<div class="meta">
-					<div class="meta-item">
-						<span class="meta-label">ECOSYSTEM</span>
-						<span class="meta-value">Elite</span>
+				<div className="meta">
+					<div className="meta-item">
+						<span className="meta-label">CATEGORY</span>
+						<span className="meta-value">{primary?.category}</span>
 					</div>
-
-					<div class="meta-item">
-						<span class="meta-label">LEARNING CURVE</span>
-						<span class="meta-value">Moderate</span>
+					<div className="meta-item">
+						<span className="meta-label">CATEGORY</span>
+						<span className="meta-value">{primary?.category}</span>
 					</div>
-
-					<div class="meta-item">
-						<span class="meta-label">SCALABILITY</span>
-						<span class="meta-value">Infinite</span>
+					<div className="meta-item">
+						<span className="meta-label">CATEGORY</span>
+						<span className="meta-value">{primary?.category}</span>
 					</div>
 				</div>
 			</div>

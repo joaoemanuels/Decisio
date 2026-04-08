@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { decisionEngine } from "../../engine/decisionEngine";
+import { useNavigate } from "react-router-dom";
+
 import questions from "../../data/questions";
 import FlowHeader from "./sections/FlowHeader";
 import FlowForm from "./sections/FlowForm";
 
 import styles from "./flow.module.css";
-import Card from "../../components/ui/Card";
 
 function Flow() {
+	const navigate = useNavigate();
+
 	const [selectedOption, setSelectedOption] = useState(null);
 	const [step, setStep] = useState(0);
 	const [answers, setAnswers] = useState({});
@@ -21,13 +23,24 @@ function Flow() {
 	function handleNext() {
 		if (!selectedOption) return;
 
-		setAnswers((prev) => ({
-			...prev,
+		const updatedAnswers = {
+			...answers,
 			[question.id]: selectedOption,
-		}));
+		};
 
+		setAnswers(updatedAnswers);
 		setSelectedOption(null);
-		setStep((prev) => prev + 1);
+
+		const nextStep = step + 1;
+
+		if (!questions[nextStep]) {
+			navigate("/results", {
+				state: updatedAnswers,
+			});
+			return;
+		}
+
+		setStep(nextStep);
 	}
 
 	function goBack() {
@@ -37,35 +50,7 @@ function Flow() {
 		const prevQuestion = questions[prevStep];
 
 		setStep(prevStep);
-
 		setSelectedOption(answers[prevQuestion.id] || null);
-	}
-
-	if (!question) {
-		const result = decisionEngine(answers);
-
-		return (
-			<section className={styles.results}>
-				<h1 className={styles.title}>
-					Stack recomendada: {result.primary?.name}
-				</h1>
-
-				<p className={styles.description}>{result.primary?.description}</p>
-
-				<div className={styles.cards}>
-					{result.recommendations.map((item, index) => (
-						<Card
-							key={item.id}
-							title={item.name}
-							description={item.description}
-							category={item.category}
-							score={item.score}
-							isPrimary={index === 0}
-						/>
-					))}
-				</div>
-			</section>
-		);
 	}
 
 	return (
