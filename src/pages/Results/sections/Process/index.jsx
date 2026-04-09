@@ -1,5 +1,9 @@
 import "./process.styles.css";
 
+import zap from "@/assets/icons/zap.svg";
+import search from "@/assets/icons/search.svg";
+import dev from "@/assets/icons/dev.svg";
+
 function Process() {
 	return (
 		<section className="process">
@@ -8,7 +12,7 @@ function Process() {
 
 				<div className="process-itens">
 					<div className="process-item">
-						<img src="" alt="" />
+						<img src={zap} alt="" />
 						<div>
 							<p>Performance-First Architecture</p>
 							<span>
@@ -20,7 +24,7 @@ function Process() {
 					</div>
 
 					<div className="process-item">
-						<img src="" alt="" />
+						<img src={search} alt="" />
 						<div>
 							<p>Optimized for Visibility</p>
 							<span>
@@ -32,7 +36,7 @@ function Process() {
 					</div>
 
 					<div className="process-item">
-						<img src="" alt="" />
+						<img src={dev} alt="" />
 						<div>
 							<p>Developer Experience</p>
 							<span>
@@ -46,7 +50,47 @@ function Process() {
 			</div>
 
 			<div className="process-right">
-				<span>Score Breakdown</span>
+				<span className="title">Score Breakdown</span>
+
+				<div className="item">
+					<div className="item-top">
+						<span>User Experience</span>
+						<span>9.8</span>
+					</div>
+					<div className="bar">
+						<div className="fill" style={{ width: "98%" }}></div>
+					</div>
+				</div>
+
+				<div className="item">
+					<div className="item-top">
+						<span>Efficiency</span>
+						<span>9.4</span>
+					</div>
+					<div className="bar">
+						<div className="fill" style={{ width: "94%" }}></div>
+					</div>
+				</div>
+
+				<div className="item">
+					<div className="item-top">
+						<span>Maintainability</span>
+						<span>9.1</span>
+					</div>
+					<div className="bar">
+						<div className="fill" style={{ width: "91%" }}></div>
+					</div>
+				</div>
+
+				<div className="item">
+					<div className="item-top">
+						<span>Community Strength</span>
+						<span>9.9</span>
+					</div>
+					<div className="bar">
+						<div className="fill" style={{ width: "99%" }}></div>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

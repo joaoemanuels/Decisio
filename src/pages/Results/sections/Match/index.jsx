@@ -22,13 +22,10 @@ function Match({ result }) {
 						<span className="meta-label">CATEGORY</span>
 						<span className="meta-value">{primary?.category}</span>
 					</div>
+
 					<div className="meta-item">
-						<span className="meta-label">CATEGORY</span>
-						<span className="meta-value">{primary?.category}</span>
-					</div>
-					<div className="meta-item">
-						<span className="meta-label">CATEGORY</span>
-						<span className="meta-value">{primary?.category}</span>
+						<span className="meta-label">Tipo</span>
+						<span className="meta-value">{primary?.type}</span>
 					</div>
 				</div>
 			</div>

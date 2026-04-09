@@ -1,0 +1,81 @@
+.landscapes {
+	padding: 94px 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.landscapes h3 {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.landscapes__cards {
+	display: flex;
+	justify-content: space-around;
+	gap: 24px;
+}
+
+.landscapes__card {
+	width: 100%;
+	padding: 32px;
+	border-radius: 24px;
+	border: 1px solid #ffffff33;
+	background-color: #131313;
+}
+
+.landscapes__card h4 {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+.landscapes__card p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #adaaaa;
+}
+
+.landscapes__card_top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.landscapes__card_top span {
+	padding: 2px 8px;
+	margin-top: -10px;
+	border-radius: 2px;
+	height: fit-content;
+	border-radius: 2px;
+
+	font-size: 9px;
+	font-weight: 500;
+	line-height: 13.5px;
+	letter-spacing: -0.45px;
+	text-transform: uppercase;
+
+	background-color: #9fa7ff2f;
+	color: #9fa7ff9f;
+}
+
+.landscapes__card_bottom {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 34px;
+}
+
+.landscapes__card_bottom span:nth-child(1) {
+	font-size: 12px;
+	line-height: 16px;
+	color: #696969;
+}
+
+.landscapes__card_bottom span:nth-child(2) {
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+}

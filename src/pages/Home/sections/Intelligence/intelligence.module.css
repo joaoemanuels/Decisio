@@ -1,25 +1,30 @@
+/* ===== SECTION ===== */
 .intelligence {
 	display: flex;
 	flex-direction: column;
-	padding: 0 40px;
 	gap: 24px;
-	background-color: #000000;
+
 	padding: 160px 40px;
+	background-color: #000;
 }
 
+/* ===== TOP GRID ===== */
 .intelligence_top {
 	display: grid;
 	grid-template-columns: 1.9fr 1fr;
 	gap: 24px;
 }
 
+/* ===== CARDS BASE ===== */
 .intelligence_top_left,
 .intelligence_top_right {
-	background-color: #131313;
 	padding: 40px;
+
 	border-radius: 24px;
+	background-color: #131313;
 }
 
+/* ===== TOP LEFT ===== */
 .intelligence_top_left_content {
 	display: flex;
 	justify-content: space-between;
@@ -31,41 +36,66 @@
 }
 
 .intelligence_top_content_left h3 {
-	color: #fff;
 	font-size: 30px;
-	line-height: 36px;
-	letter-spacing: 0;
 	font-weight: 400;
+	line-height: 36px;
+	color: #fff;
 }
 
 .intelligence_top_content_left p {
-	color: #adaaaa;
+	margin-top: 16px;
+
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 28px;
-	letter-spacing: 0;
-	margin-top: 16px;
+	color: #adaaaa;
 }
 
+/* ===== BUTTON GROUP ===== */
+.intelligence_top_btn {
+	display: flex;
+	gap: 16px;
+}
+
+.intelligence_top_btn button {
+	padding: 8px 16px;
+
+	border-radius: 99px;
+	border: 1px solid #ffffff21;
+	background-color: #0e0e0e;
+
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+/* ===== TOP RIGHT ===== */
 .intelligence_top_right {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
 }
 
 .intelligence_top_right_img {
+	position: relative; /* 🔥 necessário pro absolute funcionar */
 }
 
+/* ===== GLOW EFFECT ===== */
 .light {
 	position: relative;
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
+
 	background: radial-gradient(
 		circle,
 		rgba(159, 167, 255, 0.4) 0%,
 		transparent 100%
 	);
+
 	filter: blur(20px);
 	pointer-events: none;
 	animation: float 6s ease-in-out infinite;
@@ -75,58 +105,43 @@
 	position: absolute;
 	width: 32px;
 	height: 40px;
-	z-index: 99;
+	z-index: 1;
 }
 
 .intelligence_top_right h3 {
 	font-size: 24px;
-	color: #fff;
-	line-height: 32px;
-	letter-spacing: 0;
 	font-weight: 400;
+	line-height: 32px;
+	color: #fff;
 }
 
 .intelligence_top_right p {
-	color: #adaaaa;
 	text-align: center;
-	font-weight: 400;
+
 	font-size: 14px;
-	line-height: 20px;
-	letter-spacing: 0;
-}
-
-.intelligence_top_btn {
-	display: flex;
-	gap: 16px;
-}
-
-.intelligence_top_btn button {
-	background-color: #0e0e0e;
-	padding: 8px 16px;
-	border: 1px solid #ffffff21;
-	color: #fff;
-	font-size: 12px;
 	font-weight: 400;
-	line-height: 16px;
-	letter-spacing: 1.2px;
-	border-radius: 99px;
-	text-transform: uppercase;
+	line-height: 20px;
+	color: #adaaaa;
 }
 
+/* ===== BOTTOM GRID ===== */
 .bottom {
 	display: grid;
 	grid-template-columns: 1fr 1.9fr;
 	gap: 24px;
 }
 
+/* ===== BOTTOM LEFT ===== */
 .bottom_left {
 	display: flex;
 	flex-direction: column;
-	justify-content: end;
+	justify-content: flex-end;
+
 	height: 300px;
-	border: 1px solid #49484754;
 	padding: 40px;
+
 	border-radius: 24px;
+	border: 1px solid #49484754;
 	background-color: #201f1f;
 }
 
@@ -140,7 +155,6 @@
 	font-size: 24px;
 	font-weight: 400;
 	line-height: 32px;
-	letter-spacing: 0;
 	color: #fff;
 }
 
@@ -148,18 +162,20 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
-	letter-spacing: 0;
 	color: #adaaaa;
 }
 
+/* ===== BOTTOM RIGHT ===== */
 .bottom_right {
-	padding: 40px;
-	border-radius: 24px;
-	background-color: #201f1f;
-	border: 1px solid #49484759;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	padding: 40px;
+
+	border-radius: 24px;
+	border: 1px solid #49484759;
+	background-color: #201f1f;
 }
 
 .bottom_right_content {
@@ -175,7 +191,6 @@
 	font-size: 30px;
 	font-weight: 400;
 	line-height: 36px;
-	letter-spacing: 0;
 	color: #9fa7ff;
 }
 
@@ -183,39 +198,40 @@
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 28px;
-	letter-spacing: 0;
 	color: #adaaaa;
 }
 
 .bottom_right_content button {
 	width: 40px;
 	height: 40px;
-	background-color: #504f4f;
+
 	border-radius: 50%;
+	background-color: #504f4f;
 	color: #fff;
 }
 
+/* ===== AVATAR GROUP ===== */
 .bottom_right_btn {
 	display: flex;
 	align-items: center;
 }
 
 .bottom_right_btn span {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	border: 2px solid #1a1919;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	color: #fff;
+	width: 40px;
+	height: 40px;
+
+	border-radius: 50%;
+	border: 2px solid #1a1919;
 	background: #262626;
+
 	font-size: 10px;
 	font-weight: 400;
 	line-height: 15px;
-	letter-spacing: 0;
+	color: #fff;
 }
 
 .bottom_right_btn span:not(:first-child) {

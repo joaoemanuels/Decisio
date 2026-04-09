@@ -1,20 +1,23 @@
 .flow {
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 100px;
 }
 
 .sectionForm {
 	display: flex;
-  width: 70%;
-
 	flex-direction: column;
 	align-items: center;
+
+	width: 70%;
 	gap: 48px;
-  padding: 57px;
-  border-radius: 32px;
-  border: 1px solid #47474763;
-  box-shadow: 12px 12px 2px 1px rgba(29, 29, 63, 0.2);
+	padding: 57px;
+
+	border: 1px solid #47474763;
+	border-radius: 32px;
+
+	box-shadow: 12px 12px 2px 1px rgba(29, 29, 63, 0.2);
 }

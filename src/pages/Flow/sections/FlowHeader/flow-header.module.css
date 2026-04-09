@@ -1,35 +1,39 @@
 .flow {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .flow span {
-	padding: 4px 12px;
-	background-color: #201f1f;
-	border: 1px solid #ffffff44;
-	width: fit-content;
-	border-radius: 8px;
-	color: #9FA7FF;
-	font-size: 10px;
-	line-height: 15px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+  width: fit-content;
+  padding: 4px 12px;
+
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9FA7FF;
+
+  background-color: #201f1f;
+  border: 1px solid #ffffff44;
+  border-radius: 8px;
 }
 
 .flow h1 {
-	font-size: 48px;
-	font-weight: 400;
-	line-height: 48px;
-	letter-spacing: 1.2px;
-	color: #fff;
-	text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.2px;
+  text-align: center;
+
+  color: #fff;
 }
 
 .flow p {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 29.3px;
-	letter-spacing: 0;
-	color: #9FA7FF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29.3px;
+  letter-spacing: 0;
+
+  color: #9FA7FF;
 }

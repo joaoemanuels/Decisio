@@ -4,32 +4,31 @@
 
 .method h1 {
 	width: 40%;
+
 	font-size: 48px;
 	font-weight: 400;
 	line-height: 48px;
-	letter-spacing: 0;
 	color: #fff;
 }
 
 .method_header {
 	display: flex;
 	justify-content: space-between;
-	margin: 24px 0 96px 0;
+
+	margin: 24px 0 96px;
 }
 
 .method_header p {
-	color: #adaaaa;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 28px;
-	letter-spacing: 0;
+	color: #adaaaa;
 }
 
-.method_header p:nth-child(1) {
+.method_header p:first-child {
 	width: 40%;
 }
 
-.method_header p:nth-child(2) {
+.method_header p:last-child {
 	text-transform: uppercase;
 }
-

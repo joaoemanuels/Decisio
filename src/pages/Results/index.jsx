@@ -6,6 +6,7 @@ import { decisionEngine } from "../../engine/decisionEngine";
 import Hero from "./sections/Hero";
 import Match from "./sections/Match";
 import Process from "./sections/Process";
+import Landscapes from "./sections/Landscapes";
 
 function Results() {
 	const location = useLocation();
@@ -26,6 +27,7 @@ function Results() {
 				<Hero result={result} />
 				<Match result={result} />
 				<Process result={result} />
+				<Landscapes result={result} />
 			</section>
 		</section>
 	);

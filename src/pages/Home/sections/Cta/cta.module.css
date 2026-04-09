@@ -1,39 +1,44 @@
 .cta {
-	padding: 160px 0;
 	display: flex;
 	justify-content: center;
+
+	padding: 160px 0;
+
 	border-bottom: 1px solid rgba(255, 255, 255, 0.397);
 }
 
 .cta_content {
-	background-color: #8d98ff;
-	width: 80%;
-	padding: 96px;
-	border-radius: 48px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 40px;
+
+	width: 80%;
+	padding: 96px;
+
+	border-radius: 48px;
+	background-color: #8d98ff;
 	box-shadow: 12px 10px 20px 1px rgba(255, 255, 255, 0.137);
 }
 
 .cta_content h2 {
+	width: 60%;
+
 	font-size: 60px;
 	font-weight: 600;
-	list-style: 60px;
-	letter-spacing: 0;
+	line-height: 60px; 
 	text-align: center;
 	color: #000a7b;
-	width: 60%;
 }
 
 .cta_content .btn {
-	border-radius: 12px;
-	color: #ffffff;
-	background-color: black;
 	padding: 20px 68px;
+
+	border-radius: 12px;
+	background-color: #000;
+	color: #fff;
+
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 28px;
-	letter-spacing: 0;
 }
