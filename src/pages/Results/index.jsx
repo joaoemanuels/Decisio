@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import Match from "./sections/Match";
 import Process from "./sections/Process";
 import Landscapes from "./sections/Landscapes";
+import Controls from "./sections/Controls";
 
 function Results() {
 	const location = useLocation();
@@ -28,6 +29,7 @@ function Results() {
 				<Match result={result} />
 				<Process result={result} />
 				<Landscapes result={result} />
+				<Controls result={result} />
 			</section>
 		</section>
 	);
