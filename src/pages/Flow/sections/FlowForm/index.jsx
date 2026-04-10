@@ -34,6 +34,7 @@ function FlowForm({ question, onSelect, onNext, onBack, selectedOption }) {
 					Próximo
 				</button>
 			</div>
+			<div className={`${styles.light} ${styles.bottomRight}`} />
 		</>
 	);
 }

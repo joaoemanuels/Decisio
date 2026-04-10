@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./cta.module.css";
 
 function Cta() {
@@ -5,7 +6,9 @@ function Cta() {
 		<section className={styles.cta}>
 			<div className={styles.cta_content}>
 				<h2>Ready to build the right way?</h2>
-				<button>Start Decision</button>
+				<Link to="/flow">
+					<button className={styles.btn}>Start Decision</button>
+				</Link>
 			</div>
 		</section>
 	);

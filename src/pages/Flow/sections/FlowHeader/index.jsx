@@ -6,6 +6,8 @@ function FlowHeader({ question }) {
 			<span>{question.category}</span>
 			<h1>{question.title}</h1>
 			<p>{question.description}</p>
+
+			<div className={`${styles.light} ${styles.topLeft}`} />
 		</section>
 	);
 }

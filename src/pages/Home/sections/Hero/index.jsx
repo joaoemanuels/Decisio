@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../../components/ui/Button";
 import Analysis from "./Analysis";
 import styles from "./hero.module.css";
@@ -17,8 +18,10 @@ function Hero() {
 				</p>
 
 				<div className={styles.hero_content_btn}>
-					<Button btn={"Start Decision"} />
-					<Button btn={"View Demo"} />
+					<Link to="/flow">
+						<Button btn={"Start Decision"} />
+						<Button btn={"View Demo"} />
+					</Link>
 				</div>
 			</div>
 

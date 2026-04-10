@@ -5,12 +5,15 @@ import score from "@/assets/icons/score.svg";
 function Match({ result }) {
 	const primary = result.primary;
 
+	const maxScore = result.recommendations?.[0]?.score || 1;
+	const matchScore = primary ? Math.round((primary.score / maxScore) * 100) : 0;
+
 	return (
 		<section className="match">
 			<div className="match-left">
 				<div className="match-score">
 					<img src={score} alt="" />
-					<span>{primary?.score || 0}% Match Score</span>
+					<span>{matchScore}% Match Score</span>
 				</div>
 
 				<h2>{primary?.name}</h2>

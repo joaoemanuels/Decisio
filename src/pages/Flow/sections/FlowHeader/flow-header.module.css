@@ -37,3 +37,29 @@
 
   color: #9FA7FF;
 }
+
+
+.light {
+	position: absolute;
+
+	width: 760px;
+	height: 950px;
+
+	border-radius: 50%;
+	filter: blur(100px);
+	pointer-events: none;
+
+	background: radial-gradient(
+		circle,
+		rgba(103, 115, 255, 0.1) 0%,
+		transparent 100%
+	);
+
+	animation: float 6s ease-in-out infinite;
+}
+
+.topLeft {
+	top: -150px;
+	left: -10%;
+}
+

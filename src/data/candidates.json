@@ -4,7 +4,7 @@
 		"name": "React",
 		"category": "frontend",
 		"description": "Biblioteca para criação de interfaces dinâmicas.",
-		"type": "framework",
+		"type": "library",
 		"priority": 2
 	},
 	{
@@ -14,68 +14,60 @@
 		"description": "Framework React com SSR, SEO e alta performance.",
 		"type": "framework",
 		"priority": 3,
-		"boosts": ["seo", "performance"]
+		"strengths": ["seo", "performance", "scalability"]
+	},
+	{
+		"id": "vue",
+		"name": "Vue.js",
+		"category": "frontend",
+		"description": "Framework progressivo focado em simplicidade e produtividade.",
+		"type": "framework",
+		"priority": 2,
+		"strengths": ["simplicity", "productivity"]
+	},
+	{
+		"id": "vite",
+		"name": "Vite",
+		"category": "frontend",
+		"description": "Build tool extremamente rápida para projetos modernos.",
+		"type": "tooling",
+		"priority": 2,
+		"strengths": ["performance", "developer_experience"]
 	},
 	{
 		"id": "node",
 		"name": "Node.js",
 		"category": "backend",
-		"description": "Ambiente para APIs, lógica de servidor e aplicações escaláveis.",
+		"description": "Ambiente para APIs e aplicações server-side.",
 		"type": "runtime",
-		"priority": 3
+		"priority": 3,
+		"strengths": ["backend", "scalability"]
 	},
 	{
-		"id": "backend",
-		"name": "Backend Architecture",
+		"id": "express",
+		"name": "Express",
 		"category": "backend",
-		"description": "Necessidade de estrutura de servidor e regras de negócio.",
-		"type": "concept",
+		"description": "Framework minimalista para criação de APIs com Node.js.",
+		"type": "framework",
 		"priority": 2,
 		"requires": ["node"]
 	},
 	{
-		"id": "database",
-		"name": "Database",
-		"category": "infra",
-		"description": "Sistema de armazenamento de dados estruturados.",
-		"type": "infra",
+		"id": "postgres",
+		"name": "PostgreSQL",
+		"category": "database",
+		"description": "Banco de dados relacional robusto e escalável.",
+		"type": "database",
 		"priority": 3,
-		"requires": ["backend"]
+		"strengths": ["database", "scalability"]
 	},
 	{
-		"id": "seo",
-		"name": "SEO Optimization",
-		"category": "marketing",
-		"description": "Otimização para mecanismos de busca.",
-		"type": "strategy",
+		"id": "mongodb",
+		"name": "MongoDB",
+		"category": "database",
+		"description": "Banco de dados NoSQL flexível e escalável.",
+		"type": "database",
 		"priority": 2,
-		"boostedBy": ["next"]
-	},
-	{
-		"id": "performance",
-		"name": "Performance Optimization",
-		"category": "engineering",
-		"description": "Técnicas para melhorar velocidade e eficiência.",
-		"type": "strategy",
-		"priority": 2,
-		"boostedBy": ["next"]
-	},
-	{
-		"id": "security",
-		"name": "Security Layer",
-		"category": "engineering",
-		"description": "Proteção de dados e autenticação.",
-		"type": "strategy",
-		"priority": 3,
-		"requires": ["backend"]
-	},
-	{
-		"id": "scalability",
-		"name": "Scalable Architecture",
-		"category": "architecture",
-		"description": "Capacidade de crescer com usuários e dados.",
-		"type": "concept",
-		"priority": 3,
-		"requires": ["backend", "database"]
+		"strengths": ["database", "flexibility"]
 	}
 ]

@@ -1,11 +1,14 @@
 import "./hero.styles.css";
 
-function Hero({ result }) {
+function Hero() {
 	return (
 		<div className="hero">
 			<span>Recommendation Result</span>
-			<h1>{result.primary?.name}</h1>
-			<p>{result.primary?.description}</p>
+			<h1>The Optimal Path.</h1>
+			<p>
+				Based on your requirements for high performance, SEO optimization, and
+				developer velocity, we have identified the leading architectural choice.
+			</p>
 		</div>
 	);
 }
