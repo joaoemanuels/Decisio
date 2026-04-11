@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./controls.module.css";
 
 function Controls() {
@@ -11,7 +12,9 @@ function Controls() {
 				Export Detailed Report
 			</button>
 
-			<button className={styles.restart}>↻ Restart Analysis</button>
+			<Link to="/flow">
+				<button className={styles.restart}>↻ Restart Analysis</button>
+			</Link>
 		</div>
 	);
 }

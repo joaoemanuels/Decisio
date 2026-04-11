@@ -1,56 +1,56 @@
 const rules = {
 	seo: {
-		next: 4,
+		astro: 3,
+		next: 3,
+		nuxt: 2,
 	},
 
 	performance: {
-		next: 2,
 		vite: 3,
+		sveltekit: 3,
+		astro: 2, 
+		next: 2,
 	},
 
 	interactivity: {
 		react: 4,
-		vue: 2,
+		vue: 3,
+		sveltekit: 3,
+		astro: -3, 
 	},
 
 	complexity: {
-		next: 3,
-		node: 2,
-	},
-
-	backend: {
-		node: 4,
-		express: 2,
-	},
-
-	database: {
-		postgres: 3,
-		mongodb: 2,
+		react: 3,
+		next: 2,
+		sveltekit: 2,
 	},
 
 	scalability: {
-		next: 3,
-		node: 3,
-		postgres: 2,
+		react: 3,
+		next: 2,
+		nuxt: 2,
 	},
 
 	security: {
-		node: 2,
-		postgres: 2,
-	},
-
-	content: {
-		next: 3,
-	},
-
-	conversion: {
-		vite: 2,
 		next: 2,
 	},
 
+	content: {
+		astro: 3,
+		next: 2,
+		nuxt: 2,
+	},
+
+	conversion: {
+		next: 3, 
+		astro: 2,
+	},
+
 	realtime: {
-		react: 3,
-		node: 2,
+		react: 4,
+		sveltekit: 3,
+		next: 1,
+		astro: -2, 
 	},
 };
 

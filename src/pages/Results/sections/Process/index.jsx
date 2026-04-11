@@ -4,48 +4,26 @@ import zap from "@/assets/icons/zap.svg";
 import search from "@/assets/icons/search.svg";
 import dev from "@/assets/icons/dev.svg";
 
-function Process() {
+function Process({ result }) {
+	const primary = result.primary;
+	const icons = [zap, search, dev];
+
 	return (
 		<section className="process">
 			<div className="process-left">
-				<span>Why this works</span>
+				<span>Por que isso funciona</span>
 
 				<div className="process-itens">
-					<div className="process-item">
-						<img src={zap} alt="" />
-						<div>
-							<p>Performance-First Architecture</p>
-							<span>
-								Next.js enables automatic code splitting and optimized
-								prefetching, ensuring your users experience sub-second load
-								times regardless of project complexity.
-							</span>
-						</div>
-					</div>
+					{primary?.analysis?.why?.map((item, index) => (
+						<div className="process-item" key={index}>
+							<img src={icons[index]} alt="" />
 
-					<div className="process-item">
-						<img src={search} alt="" />
-						<div>
-							<p>Optimized for Visibility</p>
-							<span>
-								Built-in support for SSR and SSG provides the metadata and
-								content density required for top-tier search engine rankings out
-								of the box.
-							</span>
+							<div>
+								<p>{item.title}</p>
+								<span>{item.text}</span>
+							</div>
 						</div>
-					</div>
-
-					<div className="process-item">
-						<img src={dev} alt="" />
-						<div>
-							<p>Developer Experience</p>
-							<span>
-								Hot Module Replacement, superior error reporting, and the vast
-								npm ecosystem significantly reduce time-to-market for your
-								engineering team.
-							</span>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 

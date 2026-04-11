@@ -3,71 +3,151 @@
 		"id": "react",
 		"name": "React",
 		"category": "frontend",
-		"description": "Biblioteca para criação de interfaces dinâmicas.",
 		"type": "library",
-		"priority": 2
+		"priority": 2,
+		"description": "Biblioteca para criação de interfaces altamente interativas.",
+
+		"strengths": ["interactivity", "ecosystem", "flexibility"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "Alta Interatividade",
+					"text": "Ideal para aplicações dinâmicas como dashboards e SPAs."
+				},
+				{
+					"title": "Ecossistema Maduro",
+					"text": "Grande quantidade de libs e suporte da comunidade."
+				}
+			]
+		}
 	},
+
 	{
 		"id": "next",
 		"name": "Next.js",
 		"category": "frontend",
-		"description": "Framework React com SSR, SEO e alta performance.",
 		"type": "framework",
 		"priority": 3,
-		"strengths": ["seo", "performance", "scalability"]
+		"description": "Framework baseado em React com SSR e foco em SEO.",
+
+		"strengths": ["seo", "performance", "scalability", "fullstack"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "SEO e SSR",
+					"text": "Renderização no servidor melhora indexação e performance inicial."
+				},
+				{
+					"title": "Arquitetura Completa",
+					"text": "Resolve roteamento, build e otimizações automaticamente."
+				}
+			]
+		}
 	},
+
 	{
 		"id": "vue",
 		"name": "Vue.js",
 		"category": "frontend",
-		"description": "Framework progressivo focado em simplicidade e produtividade.",
 		"type": "framework",
 		"priority": 2,
-		"strengths": ["simplicity", "productivity"]
+		"description": "Framework progressivo com foco em simplicidade.",
+
+		"strengths": ["simplicity", "productivity", "ux"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "Curva de Aprendizado Baixa",
+					"text": "Fácil de começar e escalar gradualmente."
+				}
+			]
+		}
 	},
+
+	{
+		"id": "nuxt",
+		"name": "Nuxt",
+		"category": "frontend",
+		"type": "framework",
+		"priority": 3,
+		"description": "Framework baseado em Vue com SSR e foco em SEO.",
+
+		"strengths": ["seo", "performance", "structure"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "SSR com Vue",
+					"text": "Entrega performance e SEO usando Vue."
+				}
+			]
+		}
+	},
+
+	{
+		"id": "astro",
+		"name": "Astro",
+		"category": "frontend",
+		"type": "framework",
+		"priority": 3,
+		"description": "Framework focado em conteúdo e performance extrema.",
+
+		"strengths": ["performance", "seo", "content"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "Zero JS por padrão",
+					"text": "Entrega páginas extremamente rápidas."
+				},
+				{
+					"title": "Perfeito para conteúdo",
+					"text": "Ideal para blogs e sites institucionais."
+				}
+			]
+		}
+	},
+
+	{
+		"id": "sveltekit",
+		"name": "SvelteKit",
+		"category": "frontend",
+		"type": "framework",
+		"priority": 2,
+		"description": "Framework moderno com compilação otimizada e alta performance.",
+
+		"strengths": ["performance", "simplicity"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "Menos overhead",
+					"text": "Código mais leve comparado a frameworks tradicionais."
+				}
+			]
+		}
+	},
+
 	{
 		"id": "vite",
 		"name": "Vite",
-		"category": "frontend",
-		"description": "Build tool extremamente rápida para projetos modernos.",
-		"type": "tooling",
-		"priority": 2,
-		"strengths": ["performance", "developer_experience"]
-	},
-	{
-		"id": "node",
-		"name": "Node.js",
-		"category": "backend",
-		"description": "Ambiente para APIs e aplicações server-side.",
-		"type": "runtime",
-		"priority": 3,
-		"strengths": ["backend", "scalability"]
-	},
-	{
-		"id": "express",
-		"name": "Express",
-		"category": "backend",
-		"description": "Framework minimalista para criação de APIs com Node.js.",
-		"type": "framework",
-		"priority": 2,
-		"requires": ["node"]
-	},
-	{
-		"id": "postgres",
-		"name": "PostgreSQL",
-		"category": "database",
-		"description": "Banco de dados relacional robusto e escalável.",
-		"type": "database",
-		"priority": 3,
-		"strengths": ["database", "scalability"]
-	},
-	{
-		"id": "mongodb",
-		"name": "MongoDB",
-		"category": "database",
-		"description": "Banco de dados NoSQL flexível e escalável.",
-		"type": "database",
-		"priority": 2,
-		"strengths": ["database", "flexibility"]
+		"category": "tooling",
+		"type": "build_tool",
+		"priority": 1,
+		"description": "Ferramenta de build rápida para projetos modernos.",
+
+		"strengths": ["performance", "developer_experience"],
+
+		"analysis": {
+			"why": [
+				{
+					"title": "DX superior",
+					"text": "Hot reload instantâneo e build rápido."
+				}
+			]
+		}
 	}
 ]
