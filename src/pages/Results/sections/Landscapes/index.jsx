@@ -1,41 +1,32 @@
 import styles from "./landscapes.module.css";
 
-function Landscapes() {
+function Landscapes({ result }) {
+	const recommendations = result.recommendations || [];
+
+	if (!recommendations.length) return null;
+
+	const others = recommendations.slice(1);
+
 	return (
 		<div className={styles.landscapes}>
 			<h3>Alternative Landscapes</h3>
+
 			<div className={styles.landscapes__cards}>
-				<div className={styles.landscapes__card}>
-					<div className={styles.landscapes__card_top}>
-						<h4>Remix</h4>
-						<span>Runner Up</span>
-					</div>
-					<p>Superior data loading and mutation handling via web standards.</p>
-					<div className={styles.landscapes__card_bottom}>
-						<span>Compatibility</span>
-						<span>88%</span>
-					</div>
-				</div>
+				{others.map((item) => (
+					<div key={item.id} className={styles.landscapes__card}>
+						<div className={styles.landscapes__card_top}>
+							<h4>{item.name}</h4>
+							<span>Runner Up</span>
+						</div>
 
-				<div className={styles.landscapes__card}>
-					<span>Runner Up</span>
-					<h4>Remix</h4>
-					<p>Superior data loading and mutation handling via web standards.</p>
-					<div className={styles.landscapes__card_bottom}>
-						<span>Compatibility</span>
-						<span>88%</span>
-					</div>
-				</div>
+						<p>{item.description}</p>
 
-				<div className={styles.landscapes__card}>
-					<span>Runner Up</span>
-					<h4>Remix</h4>
-					<p>Superior data loading and mutation handling via web standards.</p>
-					<div className={styles.landscapes__card_bottom}>
-						<span>Compatibility</span>
-						<span>88%</span>
+						<div className={styles.landscapes__card_bottom}>
+							<span>Compatibility</span>
+							<span>{item.score}%</span>
+						</div>
 					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);

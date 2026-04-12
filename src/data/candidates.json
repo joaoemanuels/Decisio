@@ -6,9 +6,7 @@
 		"type": "library",
 		"priority": 2,
 		"description": "Biblioteca para criação de interfaces altamente interativas.",
-
 		"strengths": ["interactivity", "ecosystem", "flexibility"],
-
 		"analysis": {
 			"why": [
 				{
@@ -18,11 +16,20 @@
 				{
 					"title": "Ecossistema Maduro",
 					"text": "Grande quantidade de libs e suporte da comunidade."
+				},
+				{
+					"title": "Alta Flexibilidade",
+					"text": "Permite construir arquiteturas personalizadas."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "interactivity",
+				"efficiency": "performance",
+				"maintainability": "flexibility",
+				"community": "ecosystem"
+			}
 		}
 	},
-
 	{
 		"id": "next",
 		"name": "Next.js",
@@ -30,9 +37,7 @@
 		"type": "framework",
 		"priority": 3,
 		"description": "Framework baseado em React com SSR e foco em SEO.",
-
 		"strengths": ["seo", "performance", "scalability", "fullstack"],
-
 		"analysis": {
 			"why": [
 				{
@@ -42,11 +47,20 @@
 				{
 					"title": "Arquitetura Completa",
 					"text": "Resolve roteamento, build e otimizações automaticamente."
+				},
+				{
+					"title": "Escalabilidade",
+					"text": "Suporta aplicações grandes com facilidade."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "performance",
+				"efficiency": "performance",
+				"maintainability": "scalability",
+				"community": "seo"
+			}
 		}
 	},
-
 	{
 		"id": "vue",
 		"name": "Vue.js",
@@ -54,19 +68,30 @@
 		"type": "framework",
 		"priority": 2,
 		"description": "Framework progressivo com foco em simplicidade.",
-
 		"strengths": ["simplicity", "productivity", "ux"],
-
 		"analysis": {
 			"why": [
 				{
 					"title": "Curva de Aprendizado Baixa",
 					"text": "Fácil de começar e escalar gradualmente."
+				},
+				{
+					"title": "Alta Produtividade",
+					"text": "Desenvolvimento rápido com menos complexidade."
+				},
+				{
+					"title": "Boa Experiência de Uso",
+					"text": "Interfaces reativas e intuitivas."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "ux",
+				"efficiency": "productivity",
+				"maintainability": "simplicity",
+				"community": "ux"
+			}
 		}
 	},
-
 	{
 		"id": "nuxt",
 		"name": "Nuxt",
@@ -74,19 +99,30 @@
 		"type": "framework",
 		"priority": 3,
 		"description": "Framework baseado em Vue com SSR e foco em SEO.",
-
 		"strengths": ["seo", "performance", "structure"],
-
 		"analysis": {
 			"why": [
 				{
 					"title": "SSR com Vue",
 					"text": "Entrega performance e SEO usando Vue."
+				},
+				{
+					"title": "Estrutura Organizada",
+					"text": "Projeto mais padronizado e escalável."
+				},
+				{
+					"title": "Boa Performance",
+					"text": "Otimizações nativas para aplicações rápidas."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "performance",
+				"efficiency": "performance",
+				"maintainability": "structure",
+				"community": "seo"
+			}
 		}
 	},
-
 	{
 		"id": "astro",
 		"name": "Astro",
@@ -94,9 +130,7 @@
 		"type": "framework",
 		"priority": 3,
 		"description": "Framework focado em conteúdo e performance extrema.",
-
 		"strengths": ["performance", "seo", "content"],
-
 		"analysis": {
 			"why": [
 				{
@@ -106,31 +140,51 @@
 				{
 					"title": "Perfeito para conteúdo",
 					"text": "Ideal para blogs e sites institucionais."
+				},
+				{
+					"title": "SEO otimizado",
+					"text": "Ótima indexação para mecanismos de busca."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "content",
+				"efficiency": "performance",
+				"maintainability": "performance",
+				"community": "seo"
+			}
 		}
 	},
-
 	{
 		"id": "sveltekit",
 		"name": "SvelteKit",
 		"category": "frontend",
 		"type": "framework",
 		"priority": 2,
-		"description": "Framework moderno com compilação otimizada e alta performance.",
-
+		"description": "Framework moderno com compilação otimizada.",
 		"strengths": ["performance", "simplicity"],
-
 		"analysis": {
 			"why": [
 				{
 					"title": "Menos overhead",
 					"text": "Código mais leve comparado a frameworks tradicionais."
+				},
+				{
+					"title": "Alta Performance",
+					"text": "Renderização extremamente rápida."
+				},
+				{
+					"title": "Simplicidade",
+					"text": "Menos complexidade no desenvolvimento."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "simplicity",
+				"efficiency": "performance",
+				"maintainability": "simplicity",
+				"community": "performance"
+			}
 		}
 	},
-
 	{
 		"id": "vite",
 		"name": "Vite",
@@ -138,16 +192,24 @@
 		"type": "build_tool",
 		"priority": 1,
 		"description": "Ferramenta de build rápida para projetos modernos.",
-
 		"strengths": ["performance", "developer_experience"],
-
 		"analysis": {
 			"why": [
 				{
 					"title": "DX superior",
 					"text": "Hot reload instantâneo e build rápido."
+				},
+				{
+					"title": "Alta Performance",
+					"text": "Tempo de build extremamente reduzido."
 				}
-			]
+			],
+			"scoreMap": {
+				"ux": "developer_experience",
+				"efficiency": "performance",
+				"maintainability": "developer_experience",
+				"community": "performance"
+			}
 		}
 	}
 ]

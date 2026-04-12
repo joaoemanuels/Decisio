@@ -41,6 +41,8 @@ export function decisionEngine(answers) {
 
 		recommendations: enriched.slice(0, 3),
 
+		featureScores,
+
 		meta: {
 			totalAnswers: Object.keys(answers).length,
 			generatedAt: new Date().toISOString(),

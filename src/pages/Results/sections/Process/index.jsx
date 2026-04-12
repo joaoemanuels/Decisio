@@ -6,8 +6,37 @@ import dev from "@/assets/icons/dev.svg";
 
 function Process({ result }) {
 	const primary = result.primary;
+	const featureScores = result.featureScores || {};
+
 	const icons = [zap, search, dev];
 
+	const labelMap = {
+		ux: "User Experience",
+		efficiency: "Efficiency",
+		maintainability: "Maintainability",
+		community: "Community Strength",
+	};
+
+	const scoreMap = primary?.analysis?.scoreMap || {};
+
+	const scores = Object.entries(scoreMap).map(([key, feature]) => {
+		const raw = featureScores[feature];
+
+		const safeValue = typeof raw === "number" ? raw : 0;
+
+		const value = safeValue * 2.5;
+		const percentage = (value / 10) * 100;
+
+		return {
+			label: labelMap[key],
+			value: value.toFixed(1),
+			percentage,
+		};
+	});
+	console.log("RESULT:", result);
+	console.log("FEATURE SCORES:", result.featureScores);
+	console.log("PRIMARY:", result.primary);
+	console.log("SCORE MAP:", result.primary?.analysis?.scoreMap);
 	return (
 		<section className="process">
 			<div className="process-left">
@@ -30,45 +59,21 @@ function Process({ result }) {
 			<div className="process-right">
 				<span className="title">Score Breakdown</span>
 
-				<div className="item">
-					<div className="item-top">
-						<span>User Experience</span>
-						<span>9.8</span>
-					</div>
-					<div className="bar">
-						<div className="fill" style={{ width: "98%" }}></div>
-					</div>
-				</div>
+				{scores.map((item, index) => (
+					<div className="item" key={index}>
+						<div className="item-top">
+							<span>{item.label}</span>
+							<span>{item.value}</span>
+						</div>
 
-				<div className="item">
-					<div className="item-top">
-						<span>Efficiency</span>
-						<span>9.4</span>
+						<div className="bar">
+							<div
+								className="fill"
+								style={{ width: `${item.percentage}%` }}
+							></div>
+						</div>
 					</div>
-					<div className="bar">
-						<div className="fill" style={{ width: "94%" }}></div>
-					</div>
-				</div>
-
-				<div className="item">
-					<div className="item-top">
-						<span>Maintainability</span>
-						<span>9.1</span>
-					</div>
-					<div className="bar">
-						<div className="fill" style={{ width: "91%" }}></div>
-					</div>
-				</div>
-
-				<div className="item">
-					<div className="item-top">
-						<span>Community Strength</span>
-						<span>9.9</span>
-					</div>
-					<div className="bar">
-						<div className="fill" style={{ width: "99%" }}></div>
-					</div>
-				</div>
+				))}
 			</div>
 		</section>
 	);
