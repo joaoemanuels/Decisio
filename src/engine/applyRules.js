@@ -1,7 +1,7 @@
 import rules from "./rules";
 
-const FEATURE_CAP = 5; 
-const TECH_CAP = 20; 
+const FEATURE_CAP = 5;
+const TECH_CAP = 20;
 
 export function applyRules(featureScores) {
 	const techScores = {};

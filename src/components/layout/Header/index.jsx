@@ -9,12 +9,7 @@ function Header() {
 					<h1 className="logo">Decisio</h1>
 				</a>
 
-				<nav className="nav">
-					<a href="#">About</a>
-					<a href="#">History</a>
-					<a href="/docs">Docs</a>
-				</nav>
-
+				
 				<Link to="/flow">
 					<button className="btn">Start Decision</button>
 				</Link>

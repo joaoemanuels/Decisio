@@ -20,22 +20,6 @@
 	font-weight: 600;
 }
 
-.nav {
-	display: flex;
-	gap: 32px;
-}
-
-.nav a {
-	color: #a0a7b5;
-	text-decoration: none;
-	font-size: 14px;
-	transition: 0.2s;
-}
-
-.nav a:hover {
-	color: #fff;
-}
-
 .btn {
 	background: #8d98ff;
 	color: #000a7b;
@@ -45,7 +29,6 @@
 	font-size: 14px;
 	cursor: pointer;
 	transition: 0.2s;
-	color: 14px;
 	line-height: 20px;
 	letter-spacing: 0;
 	font-size: 14px;
@@ -55,3 +38,29 @@
 .btn:hover {
 	opacity: 0.85;
 }
+
+/* Mobile first */
+@media (min-width: 280px) and (max-width: 767px) {
+	.btn {
+		padding: 8px 12px;
+		font-size: 12px;
+	}
+}
+
+/* Mobile grande */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 1024px) {
+}
+
+/* Laptop */
+@media (min-width: 1280px) {
+}
+
+/* Desktop */
+@media (min-width: 1536px) {
+}
+
+/* Desktop grande */

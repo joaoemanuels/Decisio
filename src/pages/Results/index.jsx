@@ -22,14 +22,31 @@ function Results() {
 
 	const result = decisionEngine(answers);
 
+	const exportData = {
+		meta: {
+			date: new Date().toISOString(),
+			version: "1.0",
+			source: "Decisio App",
+		},
+		input: {
+			answers,
+		},
+		analysis: {
+			recommendations: result.recommendations,
+		},
+		result: {
+			primary: result.primary,
+		},
+	};
+
 	return (
 		<section className={styles.results}>
 			<Hero result={result} />
 			<Match result={result} />
 			<Process result={result} />
 			<Landscapes result={result} />
-			<Controls result={result} />
 			
+			<Controls data={exportData} />
 		</section>
 	);
 }

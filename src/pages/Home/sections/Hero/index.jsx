@@ -17,12 +17,10 @@ function Hero() {
 					real-world benchmarks.
 				</p>
 
-				<div className={styles.hero_content_btn}>
-					<Link to="/flow">
+					<Link className={styles.hero_content_btn} to="/flow">
 						<Button btn={"Start Decision"} />
 						<Button btn={"View Demo"} />
 					</Link>
-				</div>
 			</div>
 
 			<Analysis />

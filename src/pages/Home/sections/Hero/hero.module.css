@@ -21,7 +21,7 @@
 .hero_content h1 {
 	font-size: 96px;
 	font-weight: 400;
-	line-height: 1; 
+	line-height: 1;
 	letter-spacing: 0;
 	text-align: center;
 	color: #fff;
@@ -81,3 +81,47 @@
 		transparent 70%
 	);
 }
+
+@media (min-width: 280px) and (max-width: 767px) {
+	.hero {
+		padding: 47px 0 128px;
+	}
+	.hero_content {
+		width: 100%;
+		padding: 0px 12px;
+	}
+
+	.hero_content h1 {
+		font-size: 60px;
+	}
+
+	.hero_content p {
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	.hero_content_btn {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		justify-content: center;
+	}
+}
+
+/* Mobile grande */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Tablet */
+@media (min-width: 1024px) {
+}
+
+/* Laptop */
+@media (min-width: 1280px) {
+}
+
+/* Desktop */
+@media (min-width: 1536px) {
+}
+
+/* Desktop grande */
