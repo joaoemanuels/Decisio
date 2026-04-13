@@ -1,60 +1,50 @@
 .flow {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .flow span {
-  width: fit-content;
-  padding: 4px 12px;
-
-  font-size: 10px;
-  line-height: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #9FA7FF;
-
-  background-color: #201f1f;
-  border: 1px solid #ffffff44;
-  border-radius: 8px;
+	width: fit-content;
+	padding: 4px 12px;
+	font-size: 10px;
+	line-height: 15px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #9fa7ff;
+	background-color: #201f1f;
+	border: 1px solid #ffffff44;
+	border-radius: 8px;
 }
 
 .flow h1 {
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 48px;
-  letter-spacing: 1.2px;
-  text-align: center;
-
-  color: #fff;
+	font-size: 48px;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: 1.2px;
+	text-align: center;
+	color: #fff;
 }
 
 .flow p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 29.3px;
-  letter-spacing: 0;
-
-  color: #9FA7FF;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 29.3px;
+	color: #9fa7ff;
 }
-
 
 .light {
 	position: absolute;
-
 	width: 760px;
 	height: 950px;
-
 	border-radius: 50%;
 	filter: blur(100px);
 	pointer-events: none;
-
 	background: radial-gradient(
 		circle,
 		rgba(103, 115, 255, 0.1) 0%,
 		transparent 100%
 	);
-
 	animation: float 6s ease-in-out infinite;
 }
 
@@ -63,3 +53,73 @@
 	left: -10%;
 }
 
+/* ── Mobile pequeno (até 479px) ── */
+@media (max-width: 479px) {
+	.flow {
+		gap: 16px;
+		align-items: flex-start;
+	}
+
+	.flow h1 {
+		font-size: 28px;
+		line-height: 34px;
+		letter-spacing: 0.6px;
+		text-align: left;
+	}
+
+	.flow p {
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	.light {
+		width: 320px;
+		height: 400px;
+		filter: blur(60px);
+	}
+}
+
+/* ── Mobile grande (480px – 767px) ── */
+@media (min-width: 480px) and (max-width: 767px) {
+	.flow h1 {
+		font-size: 36px;
+		line-height: 40px;
+		text-align: left;
+	}
+
+	.flow p {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	.light {
+		width: 480px;
+		height: 600px;
+		filter: blur(80px);
+	}
+}
+
+/* ── Tablet (768px – 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.flow h1 {
+		font-size: 40px;
+		line-height: 44px;
+	}
+
+	.flow p {
+		font-size: 17px;
+	}
+
+	.light {
+		width: 560px;
+		height: 700px;
+	}
+}
+
+/* ── Desktop grande (1536px+) ── */
+@media (min-width: 1536px) {
+	.flow h1 {
+		font-size: 56px;
+		line-height: 60px;
+	}
+}

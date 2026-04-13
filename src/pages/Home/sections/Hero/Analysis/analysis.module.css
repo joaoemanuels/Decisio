@@ -29,17 +29,9 @@
 	display: block;
 }
 
-.analysis_header_icon span:nth-child(1) {
-	background: #ff5f56;
-}
-
-.analysis_header_icon span:nth-child(2) {
-	background: #ffbd2e;
-}
-
-.analysis_header_icon span:nth-child(3) {
-	background: #27c93f;
-}
+.analysis_header_icon span:nth-child(1) { background: #ff5f56; }
+.analysis_header_icon span:nth-child(2) { background: #ffbd2e; }
+.analysis_header_icon span:nth-child(3) { background: #27c93f; }
 
 .analysis_header h3 {
 	font-size: 12px;
@@ -95,7 +87,6 @@
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 28px;
-	letter-spacing: 0;
 	color: #fff;
 }
 
@@ -124,7 +115,6 @@
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 16px;
-	letter-spacing: 0;
 	color: #adaaaa;
 }
 
@@ -132,7 +122,6 @@
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 0;
 	color: #fff;
 }
 
@@ -159,17 +148,15 @@
 
 .container_card h4 {
 	font-size: 24px;
-	font-weight: 32px;
+	font-weight: 400;
 	color: #fff;
 	line-height: 32px;
-	letter-spacing: 0;
 }
 
 .container_card p {
 	font-size: 10px;
 	font-weight: 400;
 	line-height: 15px;
-	letter-spacing: 0;
 	color: #adaaaa;
 	text-transform: uppercase;
 }
@@ -202,49 +189,157 @@
 	border-radius: 8px;
 }
 
-@media (min-width: 280px) and (max-width: 767px) {
+/* ── Mobile pequeno (até 479px) ── */
+@media (max-width: 479px) {
 	.analysis {
 		width: 100%;
-		height: 100%;
+		height: auto;
+		border-width: 8px;
+		border-radius: 20px;
+		margin-top: 48px;
 	}
 
 	.analysis_header {
-		padding: 16px;
+		padding: 12px 16px;
+		height: auto;
 		align-items: center;
 	}
 
 	.analysis_content {
 		padding: 16px;
 		grid-template-columns: 1fr;
-		gap: 20px;
+		gap: 16px;
 	}
 
 	.container_top {
 		padding: 16px;
-		width: 100%;
-		height: 100%;
+		height: auto;
+		gap: 16px;
+	}
+
+	.content_left_topText h4 {
+		font-size: 16px;
+		line-height: 22px;
 	}
 
 	.content_left_cards {
 		flex-direction: column;
 	}
 
+	.container_cards {
+		flex-direction: column;
+	}
+
+	.container_card {
+		width: 100%;
+		height: auto;
+		padding: 14px;
+		gap: 8px;
+	}
 }
 
-/* Mobile grande */
+/* ── Mobile grande (480px – 767px) ── */
+@media (min-width: 480px) and (max-width: 767px) {
+	.analysis {
+		width: 100%;
+		height: auto;
+		border-width: 10px;
+		border-radius: 24px;
+		margin-top: 64px;
+	}
+
+	.analysis_header {
+		padding: 14px 20px;
+		height: auto;
+		align-items: center;
+	}
+
+	.analysis_content {
+		padding: 20px;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.container_top {
+		padding: 20px;
+		height: auto;
+	}
+
+	.content_left_cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.content_left_card {
+		min-width: calc(50% - 8px);
+	}
+
+	.container_cards {
+		flex-wrap: wrap;
+	}
+
+	.container_card {
+		width: calc(50% - 8px);
+		height: auto;
+		padding: 14px;
+	}
+}
+
+/* ── Tablet (768px – 1023px) ── */
 @media (min-width: 768px) and (max-width: 1023px) {
+	.analysis {
+		width: 90%;
+		height: auto;
+		margin-top: 72px;
+	}
+
+	.analysis_content {
+		padding: 24px;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+
+	.container_top {
+		height: auto;
+	}
+
+	.container_card {
+		width: calc(50% - 8px);
+		height: auto;
+	}
+
+	.container_cards {
+		flex-wrap: wrap;
+	}
 }
 
-/* Tablet */
-@media (min-width: 1024px) {
+/* ── Laptop (1024px – 1279px) ── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.analysis {
+		width: 85%;
+	}
+
+	.analysis_content {
+		grid-template-columns: 1.5fr 1fr;
+	}
 }
 
-/* Laptop */
-@media (min-width: 1280px) {
+/* ── Desktop (1280px – 1535px) ── */
+@media (min-width: 1280px) and (max-width: 1535px) {
+	.analysis {
+		width: 80%;
+	}
 }
 
-/* Desktop */
+/* ── Desktop grande (1536px+) ── */
 @media (min-width: 1536px) {
-}
+	.analysis {
+		width: 70%;
+		max-width: 1400px;
+	}
 
-/* Desktop grande */
+	.analysis_content {
+		padding: 40px;
+		gap: 40px;
+	}
+}

@@ -8,10 +8,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
 	width: 100%;
 	padding-top: 40px;
-
 	border-top: 1px solid rgb(75, 75, 75);
 }
 
@@ -21,7 +19,6 @@
 	line-height: 20px;
 	text-align: center;
 	letter-spacing: -0.35px;
-
 	color: #0e0e0e;
 }
 
@@ -33,37 +30,90 @@
 .actions .btn:nth-child(2) {
 	width: 114px;
 	height: 48px;
-
 	background-color: #fff;
 	border-radius: 12px;
 }
 
 .light {
 	position: absolute;
-
 	width: 760px;
 	height: 950px;
-
 	border-radius: 50%;
 	filter: blur(100px);
 	pointer-events: none;
-
 	background: radial-gradient(
 		circle,
 		rgba(103, 115, 255, 0.2) 0%,
 		transparent 100%
 	);
-
 	animation: float 6s ease-in-out infinite;
 }
 
 .bottomRight {
 	bottom: -70%;
 	right: -10%;
-
 	background: radial-gradient(
 		circle,
 		rgba(103, 115, 255, 0.1) 0%,
 		transparent 100%
 	);
+}
+
+/* ── Mobile pequeno (até 479px) ── */
+@media (max-width: 479px) {
+	.flowForm {
+		grid-template-columns: 1fr;
+		gap: 14px;
+	}
+
+	.actions {
+		padding-top: 24px;
+		flex-direction: column-reverse;
+		gap: 12px;
+	}
+
+	.actions .btn:nth-child(2) {
+		width: 100%;
+	}
+
+	.light {
+		width: 300px;
+		height: 380px;
+		filter: blur(60px);
+	}
+}
+
+/* ── Mobile grande (480px – 767px) ── */
+@media (min-width: 480px) and (max-width: 767px) {
+	.flowForm {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.actions {
+		padding-top: 28px;
+	}
+
+	.actions .btn:nth-child(2) {
+		width: 140px;
+	}
+
+	.light {
+		width: 460px;
+		height: 580px;
+		filter: blur(80px);
+	}
+}
+
+/* ── Tablet (768px – 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.flowForm {
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		gap: 16px;
+	}
+
+	.actions {
+		padding-top: 32px;
+	}
 }

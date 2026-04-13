@@ -1,58 +1,70 @@
 .dropdown {
-	position: relative;
+  position: relative;
 }
 
-
 .btn {
-	padding: 20px 40px;
-	border-radius: 12px;
-	font-size: 14px;
-	font-weight: 500;
-	cursor: pointer;
-	border: none;
-	transition: all 0.2s ease;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 28px;
-	letter-spacing: 0;
-	text-align: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
 }
 
 .secondary {
-	background: #1a1a1a;
-	color: #e5e5e5;
-	border: 1px solid #2a2a2a;
-	color: #fff;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #2a2a2a;
 }
 
 .secondary:hover {
-	background: #222;
+  background: #222;
 }
 
 .menu {
-	position: absolute;
-	top: 110%;
-	left: 0;
-	display: flex;
-	flex-direction: column;
-	background: #1e1e1e;
-	border: 1px solid #333;
-	border-radius: 8px;
-	overflow: hidden;
-	min-width: 180px;
-	z-index: 10;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 180px;
+  z-index: 10;
 }
 
 .menu button {
-	background: none;
-	border: none;
-	color: white;
-	padding: 10px 14px;
-	text-align: left;
-	cursor: pointer;
-	font-size: 14px;
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .menu button:hover {
-	background: #2a2a2a;
+  background: #2a2a2a;
+}
+
+@media (max-width: 640px) {
+  .dropdown {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+  .menu {
+    min-width: 100%;
+    left: 0;
+    right: 0;
+  }
 }
