@@ -64,6 +64,7 @@
 	.flowForm {
 		grid-template-columns: 1fr;
 		gap: 14px;
+		width: 100%;
 	}
 
 	.actions {
