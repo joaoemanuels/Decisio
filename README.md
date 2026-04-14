@@ -14,7 +14,7 @@ Não é um quiz. Não é um wizard. É um sistema de raciocínio estruturado.
 
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Status](https://img.shields.io/badge/status-em_desenvolvimento-9fa7ff?style=flat-square)]()
+[![Status](https://img.shields.io/badge/status-completo-9fa7ff?style=flat-square)]()
 [![Licença](https://img.shields.io/badge/licença-MIT-0e0e0e?style=flat-square)]()
 
 </div>
@@ -70,15 +70,10 @@ A lógica de decisão vive em JSON. A UI renderiza. O motor avalia. Essas três 
 - Breakdown de pontuação por categoria (UX, performance, escalabilidade, etc.)
 - Opções alternativas ranqueadas abaixo do resultado principal
 
-### Histórico
-
-- Decisões passadas salvas localmente
-- Reabrir e revisar qualquer resultado anterior
-- _(Planejado)_ Comparação lado a lado entre decisões
-
 ### Exportação
 
 - Exportar resultado como JSON
+- Exportar resultado como CSV
 - Exportar como relatório PDF legível
 
 ---
@@ -103,7 +98,6 @@ src/
 ├── pages/                # Componentes de página no nível de rota
 ├── routes/               # Configuração do React Router, guards
 ├── services/             # Comunicação com APIs externas
-├── store/                # Estado global (Zustand)
 ├── styles/               # CSS global, variáveis, tokens
 ├── utils/                # Formatadores, validadores, helpers
 ├── App.jsx
@@ -157,9 +151,7 @@ Após todas as perguntas serem respondidas, o motor soma as pontuações por op�
 | Framework     | React 18                     |
 | Build tool    | Vite 5                       |
 | Roteamento    | React Router v6              |
-| Estado global | Zustand                      |
-| Estilização   | Tailwind CSS + variáveis CSS |
-| Data fetching | TanStack Query               |
+| Estilização   | CSS
 | Exportação    | jsPDF                        |
 | Linting       | ESLint + Prettier            |
 
@@ -201,32 +193,18 @@ npm run preview
 
 | Funcionalidade               | Status                |
 | ---------------------------- | --------------------- |
-| UI do fluxo de decisão       | 🔧 Em desenvolvimento |
-| Motor de decisão (pontuação) | 🔧 Em desenvolvimento |
-| Sistema de resultados        | 📋 Planejado          |
-| Histórico                    | 📋 Planejado          |
-| Exportação (JSON)            | 📋 Planejado          |
-| Exportação (PDF)             | 📋 Planejado          |
+| UI do fluxo de decisão       | ✅ Completo        |
+| Motor de decisão (pontuação) | ✅ Completo        |
+| Sistema de resultados        | ✅ Completo        |
+| Exportação (JSON)            | ✅ Completo        |
+| Exportação (PDF)             | ✅ Completo        |
 
 ---
 
 ## Roadmap
 
-- **Explicações assistidas por IA** — usar um LLM para gerar resumos em linguagem natural explicando por que uma stack foi recomendada
 - **Feedback de pontuação em tempo real** — exibir mudanças de pontuação conforme o usuário seleciona respostas
 - **Comparação de decisões** — visualizar duas decisões passadas lado a lado
-- **Integração com n8n** — disparar automações a partir de eventos de decisão
-- **Suporte a PWA** — acesso offline e instalação no dispositivo
-
----
-
-## Filosofia
-
-A maioria dos recursos "qual framework devo usar" são posts de blog com opiniões. O Decisio é um sistema que externaliza o processo de raciocínio — torna a lógica visível, ajustável e reproduzível.
-
-O objetivo não é dizer ao desenvolvedor o que fazer. O objetivo é tornar os trade-offs explícitos para que ele possa fazer uma escolha informada.
-
----
 
 ## Licença
 
