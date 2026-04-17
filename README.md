@@ -15,6 +15,7 @@ Não é um quiz. Não é um wizard. É um sistema de raciocínio estruturado.
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Status](https://img.shields.io/badge/status-completo-9fa7ff?style=flat-square)]()
+[![Live](https://img.shields.io/badge/Live-Acessar_Deploy-0052cc?style=flat-square&logo=vercel&logoColor=white)](https://decisio.site)
 [![Licença](https://img.shields.io/badge/licença-MIT-0e0e0e?style=flat-square)]()
 
 </div>
@@ -146,14 +147,14 @@ Após todas as perguntas serem respondidas, o motor soma as pontuações por op�
 
 ## Stack Tecnológica
 
-| Camada        | Tecnologia                   |
-| ------------- | ---------------------------- |
-| Framework     | React 18                     |
-| Build tool    | Vite 5                       |
-| Roteamento    | React Router v6              |
-| Estilização   | CSS
-| Exportação    | jsPDF                        |
-| Linting       | ESLint + Prettier            |
+| Camada      | Tecnologia        |
+| ----------- | ----------------- |
+| Framework   | React 18          |
+| Build tool  | Vite 5            |
+| Roteamento  | React Router v6   |
+| Estilização | CSS               |
+| Exportação  | jsPDF             |
+| Linting     | ESLint + Prettier |
 
 ---
 
@@ -191,13 +192,13 @@ npm run preview
 
 ## Status do Projeto
 
-| Funcionalidade               | Status                |
-| ---------------------------- | --------------------- |
-| UI do fluxo de decisão       | ✅ Completo        |
-| Motor de decisão (pontuação) | ✅ Completo        |
-| Sistema de resultados        | ✅ Completo        |
-| Exportação (JSON)            | ✅ Completo        |
-| Exportação (PDF)             | ✅ Completo        |
+| Funcionalidade               | Status      |
+| ---------------------------- | ----------- |
+| UI do fluxo de decisão       | ✅ Completo |
+| Motor de decisão (pontuação) | ✅ Completo |
+| Sistema de resultados        | ✅ Completo |
+| Exportação (JSON)            | ✅ Completo |
+| Exportação (PDF)             | ✅ Completo |
 
 ---
 
